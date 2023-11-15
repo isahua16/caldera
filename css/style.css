@@ -1,0 +1,36 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+}
+
+body {
+  display: grid;
+  justify-items: center;
+  color: #111;
+}
+
+#main_header {
+  min-height: 10vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  width: 85%;
+}
+
+#main_logo {
+  max-width: 180px;
+}
+
+#menu_icon {
+  width: 30px;
+  justify-self: end;
+}
+
+#hero_image {
+  max-width: 100%;
+  object-fit: cover;
+}
+
+/*# sourceMappingURL=style.css.map */
