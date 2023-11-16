@@ -1,26 +1,44 @@
+/* GENERAL */
+
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     font-family: 'Inter', sans-serif;
-    color: #333333;
+
 }
 
 body {
     display: grid;
     justify-items: center;
-    color: #111;
+    color: #333333;
 }
 
 p {
     line-height: 24px;
 }
 
+.section_container {
+    display: grid;
+    justify-self: center;
+    width:90%;
+}
+
+.text_input {
+    font-size: 1rem;
+    padding: 12px 12px;
+    border-radius: 6px;
+    line-height: 24px;
+    border: 1px solid #e5e7eb;
+}
+
+/* HEADER */
+
 #main_header {
     min-height: 15vh;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    align-items: center;
+    place-items: center;
     width: 85%;
 }
 
@@ -33,6 +51,22 @@ p {
     justify-self: end;
 }
 
+#mobile_nav {
+    display: grid;
+    height: 0;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.5s, height 0.5, linear;
+    place-items: center;
+    gap:12px;
+    transition: 0.5s;
+}
+
+
+
+
+/* HERO */
+
 #hero_image {
     max-width: 100%;
     object-fit: cover;
@@ -42,13 +76,12 @@ p {
     margin: 50px 0px;
     display: grid;
     width:90%;
-    align-items: center;
+    place-items: center;
 }
 
 #team_photo {
     max-width: 90%;
     object-fit: cover;
-    justify-self: center;
 }
 
 #welcome_text {
@@ -60,20 +93,12 @@ p {
     gap: 20px;
 }
 
-#subscribe_section {
+#subscribe_component {
     display: grid;
     gap:10px;
 }
 
-.input {
-    font-size: 1rem;
-    padding: 12px 12px;
-    border-radius: 6px;
-    line-height: 24px;
-    border: 1px solid #e5e7eb;
-}
-
-.secondary_button {
+#subscribe_btn {
     background-color: white;
     font-size: 1rem;
     padding: 12px 40px;
@@ -81,6 +106,8 @@ p {
     line-height: 24px;
     border-radius: 6px;
 }
+
+/* GAME */
 
 #game_section {
     background-color: #f2f2f2;
@@ -90,11 +117,19 @@ p {
     align-items: center;
 }
 
-#game_section_container {
-    display:grid;
-    width:90%;  
-    align-items: center;
-    justify-self: center;
+#game_section_title {
+    display: grid;
+    gap:12px;
+    margin-bottom: 50px;
+}
+
+#game_card {
+    display: grid;
+    place-items: center;
+    gap:24px;
+    background-color: white;
+    border-radius: 6px;
+    padding-bottom: 24px;
 }
 
 #concept_image {
@@ -104,39 +139,12 @@ p {
     border-top-right-radius: 6px;
 }
 
-.section_title {
-    display: grid;
-    gap:12px;
-    margin-bottom: 50px;
-}
-
-.game_card {
-    display: grid;
-    align-items: center;
-    gap:24px;
-    background-color: white;
-    border-radius: 6px;
-    padding-bottom: 24px;
-}
-
 #game_text {
     padding: 0px 30px;
     line-height: 30px;
 }
 
-.primary_button {
-font-size: 1rem;
- background-color: #00b8f1;
- color:white;
- padding:12px 40px;
- width:50%;
- justify-self: center;
- border: none;
- border-radius: 6px;
- line-height: 24px;
-}
-
-.wishlist_btn {
+#wishlist_btn {
     display: grid;
     grid-template-columns: 135px 1fr;
     gap: 5px;
@@ -148,21 +156,156 @@ font-size: 1rem;
     border: none;
 }
 
-.wishlist_btn > a {
+#wishlist_btn_text {
     font-size: 1.0rem;
     text-decoration: none;
     text-align: center;
     color: #b8dc89;
 }
 
-.wishlist_btn > svg {
+#wishlist_btn_image {
     justify-self: center;
 }
+
+/* BLOG */
 
 #blog_section {
     padding: 50px 0px;
     display:grid;
     width:100%;  
-    align-items: center;
 }
 
+#blog_section_title {
+    display: grid;
+    gap:12px;
+    margin-bottom: 50px;
+}
+
+#recent_posts_component {
+    display: grid;
+    gap:30px;
+    place-items: center;
+}
+
+.post_card {
+    display: grid;
+    place-items: center;
+    gap: 24px;
+    background-color: white;
+    border-radius: 6px;
+    padding-bottom: 24px;
+    border: 1px solid #dddddd;
+}
+
+.post_card_image {
+    justify-self: center;
+    width: 100%;
+    object-fit: cover;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+}
+
+.post_card_title {
+    width: 90%;
+}
+
+.post_card_desc {
+    width: 90%;
+}
+
+.post_card_link {
+    width: 90%;
+    color:#00b8f1;
+    
+}
+
+#blog_btn {
+    width: 90%;
+    background-color: white;
+    font-size: 1rem;
+    padding: 12px 40px;
+    border: 1px solid #333333;
+    line-height: 24px;
+    border-radius: 6px; 
+}
+
+/* TEAM */
+
+#team_section {
+    background-color: #f2f2f2;
+    padding: 50px 0px;
+    display:grid;
+    width:100%;  
+}
+
+#team_section_title {
+    margin-bottom: 50px;
+}
+
+#team_component {
+    display: grid;
+    place-items: center;
+    gap: 30px;
+}
+
+.team_card {
+    width: 90%;
+    display: grid;
+    place-items: center;
+    gap: 16px;
+}
+.team_card_image {
+    width:100%;
+}
+
+.team_card_name {
+    width:90%;
+}
+
+.team_card_desc {
+    width:90%;
+}
+
+/* CONTACT */
+
+#contact_section {
+    padding: 50px 0px;
+    display:grid;
+    width:100%;  
+}
+
+#contact_section_title {
+    margin-bottom: 50px;
+}
+
+#contact_component {
+    display: grid;
+    gap:30px;
+}
+
+#message_input {
+    border-radius: 6px;
+    line-height: 24px;
+    font-size: 1rem;
+    border: 1px solid #e5e7eb;
+    padding: 12px 12px;
+}
+
+#send_btn {
+    width: 120px;
+    background-color: white;
+    font-size: 1rem;
+    padding: 12px 40px;
+    border: 1px solid #333333;
+    line-height: 24px;
+    border-radius: 6px;
+}
+
+/* FOOTER */
+
+#main_footer {
+    background-color: #f2f2f2;
+    padding: 50px 0px;
+    display:grid;
+    width:100%;  
+}
