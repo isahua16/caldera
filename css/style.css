@@ -1,36 +1,168 @@
 * {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-  font-family: "Open Sans", sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+    color: #333333;
 }
 
 body {
-  display: grid;
-  justify-items: center;
-  color: #111;
+    display: grid;
+    justify-items: center;
+    color: #111;
+}
+
+p {
+    line-height: 24px;
 }
 
 #main_header {
-  min-height: 10vh;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  align-items: center;
-  width: 85%;
+    min-height: 15vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    width: 85%;
 }
 
 #main_logo {
-  max-width: 180px;
+    max-width: 200px;
 }
 
 #menu_icon {
-  width: 30px;
-  justify-self: end;
+    width: 30px;
+    justify-self: end;
 }
 
 #hero_image {
-  max-width: 100%;
-  object-fit: cover;
+    max-width: 100%;
+    object-fit: cover;
 }
 
-/*# sourceMappingURL=style.css.map */
+#welcome_section {
+    margin: 50px 0px;
+    display: grid;
+    width:90%;
+    align-items: center;
+}
+
+#team_photo {
+    max-width: 90%;
+    object-fit: cover;
+    justify-self: center;
+}
+
+#welcome_text {
+    width:90%;  
+    display: grid;
+    align-items: center;
+    margin: 30px 0px;
+    justify-self: center;
+    gap: 20px;
+}
+
+#subscribe_section {
+    display: grid;
+    gap:10px;
+}
+
+.input {
+    font-size: 1rem;
+    padding: 12px 12px;
+    border-radius: 6px;
+    line-height: 24px;
+    border: 1px solid #e5e7eb;
+}
+
+.secondary_button {
+    background-color: white;
+    font-size: 1rem;
+    padding: 12px 40px;
+    border: 1px solid #333333;
+    line-height: 24px;
+    border-radius: 6px;
+}
+
+#game_section {
+    background-color: #f2f2f2;
+    padding: 50px 0px;
+    display:grid;
+    width:100%;  
+    align-items: center;
+}
+
+#game_section_container {
+    display:grid;
+    width:90%;  
+    align-items: center;
+    justify-self: center;
+}
+
+#concept_image {
+    max-width: 100%;
+    object-fit: cover;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+}
+
+.section_title {
+    display: grid;
+    gap:12px;
+    margin-bottom: 50px;
+}
+
+.game_card {
+    display: grid;
+    align-items: center;
+    gap:24px;
+    background-color: white;
+    border-radius: 6px;
+    padding-bottom: 24px;
+}
+
+#game_text {
+    padding: 0px 30px;
+    line-height: 30px;
+}
+
+.primary_button {
+font-size: 1rem;
+ background-color: #00b8f1;
+ color:white;
+ padding:12px 40px;
+ width:50%;
+ justify-self: center;
+ border: none;
+ border-radius: 6px;
+ line-height: 24px;
+}
+
+.wishlist_btn {
+    display: grid;
+    grid-template-columns: 135px 1fr;
+    gap: 5px;
+    align-items: center;
+    padding: 12px 40px;
+    border-radius: 6px;
+    justify-self: center;
+    background: linear-gradient( to right, #6fa720 5%, #588a1b 95%);
+    border: none;
+}
+
+.wishlist_btn > a {
+    font-size: 1.0rem;
+    text-decoration: none;
+    text-align: center;
+    color: #b8dc89;
+}
+
+.wishlist_btn > svg {
+    justify-self: center;
+}
+
+#blog_section {
+    padding: 50px 0px;
+    display:grid;
+    width:100%;  
+    align-items: center;
+}
+
